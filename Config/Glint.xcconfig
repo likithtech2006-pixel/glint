@@ -1,0 +1,24 @@
+// Shared build settings for every target.
+
+// To rename the app, change APP_NAME. The bundle name, menu titles, permission
+// text and onboarding copy all follow it. (Module and target names stay "Glint"
+// so source imports never need touching.)
+APP_NAME = Glint
+
+// Changing the bundle ID makes macOS treat this as a new app: every permission
+// has to be granted again.
+APP_BUNDLE_ID = com.sailikith.glint
+
+MARKETING_VERSION = 0.1.0
+CURRENT_PROJECT_VERSION = 1
+
+MACOSX_DEPLOYMENT_TARGET = 15.0
+SWIFT_VERSION = 6.0
+ARCHS = arm64
+
+// A real certificate, not ad-hoc signing, on purpose. macOS ties privacy grants
+// to the signature, so ad-hoc builds lose Screen Recording and Accessibility on
+// every rebuild. Release builds will switch to "Developer ID Application".
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = Apple Development
+DEVELOPMENT_TEAM = A7Y559GTM5
